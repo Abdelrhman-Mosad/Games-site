@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Reviews</title>
+    <meta name="keywords" content="Games, reviews">
+    <link rel="icon" href="./imgs/logo-sm.png">
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">    
+</head>
+<body class="bg-main">
+    
+    <nav class="navbar navbar-expand-lg py-1 bg-navbar position-fixed z-1 w-100">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="d-flex justify-content-evenly align-items-center">
+                    <img src="./imgs/logo-sm.png" alt="games icon" class="w-25">
+                    <p class="fs-4 text-white bold-2">Game Reviews</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white me-3 active" aria-current="page" href="#">MMORPG</a></li>
+                    <li class="nav-item"><a class="nav-link text-white me-3" href="#">SHOOTER</a></li>
+                    <li class="nav-item"><a class="nav-link text-white me-3" href="#">SAILING</a></li>
+                    <li class="nav-item"><a class="nav-link text-white me-3" href="#">PERMADEATH</a></li>
+                    <li class="nav-item"><a class="nav-link text-white me-3" href="#">SUPERHERO</a></li>
+                    <li class="nav-item"><a class="nav-link text-white me-3" href="#">PIXEL</a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 bg-navbar border-top-0 border-start-0 border-end-0" type="search" placeholder="Search" id="search-bar"/>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container overflow-hidden">
+
+        <p class="text-danger text-center fs-4 d-none mt-6" id="search-failed">Game is not found</p>
+        <div class="row g-5 mt-6 pb-5">
+            <!-- Templet used to generate card games -->
+            <div class="card-temp col-md-6 col-lg-3 bg-main text-white d-flex flex-column d-none" id="card-temp">
+                <div class="card_wp py-2 flex-grow-1 d-flex flex-column">
+                    <figure>
+                        <img src="" alt="" class="w-100">
+                    </figure>
+                    <figcaption class="flex-grow-1">
+                        <div class="game-header d-flex justify-content-between align-items-center">
+                            <h3 class="game-title-header fs-3">title</h3>
+                            <span class="game-tag-price fs-2 bg-primary p-1 rounded-4">Free</span>
+                        </div>
+
+                        <p class="game-disc">discreption</p>
+                    </figcaption>
+
+                    <div class="card-footer d-flex justify-content-between pt-2">
+                        <span class="game-tag game-catg fs-1 bg-sec p-1 rounded-3">genre</span>
+                        <span class="game-tag game-platform fs-1 bg-sec p-1 rounded-3">platform</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="game-details-layer" class="text-white position-absolute bg-main w-100 d-none py-5">
+        <div class="container mt-5 pb-5"> 
+            <div class="layer-header d-flex justify-content-between my-5">
+                <h2>Game Details</h2>
+                <button class="btn text-danger" type="button" id="close-button">X</button>
+            </div>
+
+            <div id="Img-slider" class="position-relative">
+                <div class="imgWp d-flex  justify-content-between overflow-hidden">
+                    <img src="" alt="" class="w-45">
+                    <img src="" alt="" class="w-45">
+                </div>
+
+                <div class="position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-between align-content-center">
+                    <button type="button" class="btn text-light" btn-id="left-btn"> <i class="fa fa-arrow-left fa-3x"></i> </button>
+                    <button type="button" class="btn text-light" btn-id="right-btn"> <i class="fa fa-arrow-right fa-3x"></i> </button>
+                </div>
+            </div>
+
+            <div id="layer-content" class="mt-5">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <figure>
+                                <img src="" alt="" class="w-100">
+                            </figure>
+                        </div>
+
+                        <div id="content" class=" col-md-8">
+                            <ul>
+                                <li class="d-flex"><span class="w-25">Title:</span>    <h3 class="fs-4"></h3></li>
+                                <li class="d-flex"><span class="w-25">Category:</span> <h3 class="p-2 bg-primary fs-1 rounded-3"></h3></li>
+                                <li class="d-flex"><span class="w-25">Platform:</span> <h3 class="p-2 bg-primary fs-1 rounded-3"></h3></li>
+                                <li class="d-flex"><span class="w-25">Status:</span>   <h3 class="p-2 bg-primary fs-1 rounded-3"></h3></li>
+                            </ul>
+
+                            <p id="disc"></p>
+
+                            <a href="" class="btn btn-primary" id="game-link" target="_blank">Show Game</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="py-5 bg-sec">
+        <div class="container text-white">
+            <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            <p>Powered by <a href="https://www.freetogame.com/api-doc">Free to game</a></p>
+        </div>
+    </footer>
+    <!-- external js need to link file ==>>  why in the end ? to make sure all html code is written  -->
+    <script src="./js/main.js"></script>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

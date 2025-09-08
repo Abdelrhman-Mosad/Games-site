@@ -1,0 +1,116 @@
+
+:root{
+    --main-font: "Roboto", sans-serif;
+}
+
+/******************* Fonts *************************/
+body{
+    font-family: var(--main-font) !important;
+}
+
+.fs-1{
+    font-size: 12px !important;
+}
+
+.fs-2{
+    font-size: 16px !important;
+}
+
+.fs-3{
+    font-size: 18px !important;
+}
+
+
+.fs-4{
+    font-size: 20px !important;
+}
+
+
+.fs-5{
+    font-size: 28px !important;
+}
+
+.fs-6{
+    font-size: 40px !important;
+}
+
+.bold-1{
+    font-weight: 600;
+}
+.bold-2{
+    font-weight: 700;
+}
+.bold-3{
+    font-weight: 800;
+}
+
+/******************* colors *************************/
+.bg-navbar{
+    background-color: #394879; 
+}
+.bg-main{
+    background-color: #272B30;
+}
+.bg-sec{
+    background-color: #32383E;
+}
+
+
+/******************* spacing *************************/
+.mt-6{
+    margin-top: 5rem !important;
+}
+
+.w-45{
+    width: 45%;
+}
+
+/******************* NavBar *************************/
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--bs-blue) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--bs-blue) !important;
+}
+
+input::placeholder{
+    color:#ffffffff !important;
+}
+
+/******************* main *************************/
+
+body{
+    background-image: url('../imgs/wraper.png');
+    background-repeat: no-repeat;
+}
+
+
+
+/******************* game temp *************************/
+.card-temp{
+    border: #32383E 2px solid;
+}
+
+.card-temp .card-footer{
+    border-top: #394879 2px solid;
+    
+}
+
+
+
+
+/*************************************************/
+#game-details-layer{
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf');
+}
